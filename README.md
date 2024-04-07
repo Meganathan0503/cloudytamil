@@ -7,29 +7,7 @@ Hearzap-Console-v3
 Python version 3.10.x
 Django version 4.0.x
 
-# Install mysql server locally
-*********************************************
-> sudo apt update
 
-> sudo apt install mysql-server
-
-> sudo systemctl status mysql
-
-> sudo mysql_secure_installation
-
-> mysql -u root -p
-
-> mysql > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'secret';
-
-> mysql > FLUSH PRIVILEGES;
-
-> mysql > exit;
-
-> sudo service mysql restart
-
-> sudo apt-get install mysql-client
-
-> sudo apt-get install libmysqlclient-dev
 
 # setting up venvs
 ****************
@@ -62,6 +40,13 @@ Django version 4.0.x
 > pip install -r requirements.txt
 
 > cd /opt/workspace/hearzap-console/appsource/dxp/
+> #maria db configration
+> sudo apt update
+> sudo apt install mariadb-server
+> sudo systemctl start mariadb
+> sudo systemctl enable mariadb
+> sudo mysql_secure_installation
+> sudo mariadb
 
 # create db
 ***********************
@@ -82,3 +67,27 @@ Django version 4.0.x
 > python3 manage.py runscript script_fixtures_run
 
 > python3 manage.py runserver
+> 
+> # Install mysql server locally
+*********************************************
+> sudo apt update
+
+> sudo apt install mysql-server
+
+> sudo systemctl status mysql
+
+> sudo mysql_secure_installation
+
+> mysql -u root -p
+
+> mysql > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'secret';
+
+> mysql > FLUSH PRIVILEGES;
+
+> mysql > exit;
+
+> sudo service mysql restart
+
+> sudo apt-get install mysql-client
+
+> sudo apt-get install libmysqlclient-dev
