@@ -39,8 +39,7 @@ Django version 4.0.x
 
 > pip install -r requirements.txt
 
-> cd /opt/workspace/hearzap-console/appsource/dxp/
-> #maria db configration
+#maria db configration
 > sudo apt update
 > sudo apt install mariadb-server
 > sudo systemctl start mariadb
