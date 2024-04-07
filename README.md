@@ -39,7 +39,8 @@ Django version 4.0.x
 
 > pip install -r requirements.txt
 
-#maria db configration
+#MARIA DB
+****************
 > sudo apt update
 > sudo apt install mariadb-server
 > sudo systemctl start mariadb
